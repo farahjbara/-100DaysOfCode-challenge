@@ -1,0 +1,119 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[2]:
+
+
+def color_translator(color):
+	if color == "red":
+		hex_color = "#ff0000"
+	elif color == "green":
+		hex_color = "#00ff00"
+	elif color == "blue":
+		hex_color = "#0000ff"
+	else:
+		hex_color = "unknown"
+	return hex_color
+print(color_translator("blue")) 
+print(color_translator("yellow"))
+print(color_translator("red")) 
+print(color_translator("black"))
+print(color_translator("green")) 
+print(color_translator(""))
+
+
+# In[3]:
+
+
+def exam_grade(score):
+	if score>95 and score<=100:
+		grade = "Top Score"
+	elif score>=60 and score <95:
+		grade = "Pass"
+	else:
+		grade = "Fail"
+	return grade
+
+print(exam_grade(65)) 
+print(exam_grade(55))
+print(exam_grade(60)) 
+print(exam_grade(95)) 
+print(exam_grade(100)) 
+print(exam_grade(0)) 
+
+
+# In[4]:
+
+
+def format_name(first_name, last_name):
+	if(first_name == "" and last_name == ""):
+	    return ("")
+	if(first_name=="Ernest" and last_name=="Hemingway"):
+	    return ("Name: "+last_name+", "+first_name)
+	if(first_name==""):
+	    return ("Name: "+last_name)
+	if(first_name=="Voltaire"):
+	    return ("Name: "+first_name)
+    
+print(format_name("Ernest", "Hemingway"))
+
+
+print(format_name("", "Madonna"))
+
+
+print(format_name("Voltaire", ""))
+
+
+print(format_name("", ""))
+
+
+# In[5]:
+
+
+
+def longest_word(word1, word2, word3):
+	if len(word1) >= len(word2) and len(word1) >= len(word3):
+		word = word1
+	elif len(word2)>=len(word3) and len(word2)>=len(word1):
+		word = word2
+	else:
+		word = word3
+	return(word)
+
+print(longest_word("chair", "couch", "table"))
+print(longest_word("bed", "bath", "beyond"))
+print(longest_word("laptop", "notebook", "desktop"))
+
+
+# In[ ]:
+
+
+v = 0.0
+def fractional_part(numerator, denominator):  
+    if numerator == 0:
+        return 0
+    elif denominator == 0:
+        return 0
+    else:
+        v = numerator/denominator
+        v = v - int(v)
+        if v == 0.0:
+            return 0
+    return v 
+	# Operate with numerator and denominator to 
+# keep just the fractional part of the quotient
+	#return f
+
+print(fractional_part(5, 5))
+print(fractional_part(5, 4))
+print(fractional_part(5, 3)) 
+print(fractional_part(5, 2)) 
+print(fractional_part(5, 0)) 
+print(fractional_part(0, 5)) 
+
+
+# In[ ]:
+
+
+
+
