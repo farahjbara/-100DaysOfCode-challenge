@@ -1,1 +1,93 @@
 
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[2]:
+
+
+def factorial(n):
+    result = 1
+    for x in range(1,n+1):
+        result = result * x
+    return result
+
+for n in range(0,10):
+    print(n, factorial(n+0))
+    
+
+
+# In[3]:
+
+
+for num in range(0,100):
+  if(num % 7==0):
+    print(num)
+  else:
+    num= num + 1
+
+
+# In[6]:
+
+
+def retry(operation, attempts):
+  for n in range(attempts):
+    if operation():
+      print("Attempt " + str(n) + " succeeded")
+      break
+    else:
+      print("Attempt " + str(n) + " failed")
+
+retry(create_user, 3)
+retry(stop_service, 5)
+
+
+# In[ ]:
+
+
+
+def is_power_of(number, base):
+
+  if (number < base) and (number==1):
+ 
+    return True
+  elif (number == 0):
+    return False
+  else:
+    number = number / base
+
+  return is_power_of(number, base)
+
+print(is_power_of(8,2)) 
+print(is_power_of(64,4)) 
+print(is_power_of(70,10)) 
+
+
+# In[7]:
+
+
+def count_users(group):
+  count = 0
+  for member in get_members(group):
+    if is_group(member):
+      count += count_users(member)
+    else:
+        count += 1
+  return count
+
+print(count_users("sales")) 
+print(count_users("engineering"))
+print(count_users("everyone")) 
+
+
+# In[ ]:
+
+
+def sum_positive_numbers(n): 
+    if n <= 1: 
+        return n 
+    return n + sum_positive_numbers(n - 1) 
+    
+    
+print(sum_positive_numbers(3)) 
+print(sum_positive_numbers(5)) 
+
